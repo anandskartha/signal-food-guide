@@ -3,4 +3,4 @@ The Government of Canada wishes to provide the Canada Food Guide as an online se
 
 # Test Env
 The app is deployed in this link. Please take a look at it and feel free to raise issues if you find any.
-Smart Plate - https://4135869d.signal-food-guide.pages.dev/
+Smart Plate - https://5a8beff1.signal-food-guide.pages.dev/
