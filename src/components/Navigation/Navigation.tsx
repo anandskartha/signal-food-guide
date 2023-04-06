@@ -18,6 +18,10 @@ const Navigation = ({ currentPage, setCurrentPage, isTop }: Props) => {
     const bg1Color = !isTop ? 'bg-p-100 drop-shadow' : ''
     
     const toggleMenu = () => setToggled(!isToggled)
+    const setCurrentPageAndClose = (updatedText: Page) => {
+        setCurrentPage(updatedText)
+        setToggled(false)
+    }
     return (
         <nav>
             <div className={`${flexBetween} ${bg1Color} w-full z-30 py-6 fixed`}>
@@ -48,9 +52,9 @@ const Navigation = ({ currentPage, setCurrentPage, isTop }: Props) => {
                         </button>
                     </div>
                     <div className={`ml-[20%] flex flex-col gap-12 text-xl`}>
-                        <Link text='Home' currentPage={currentPage} setCurrentPage={setCurrentPage} />
-                        <Link text='Why Should I Eat Clean' currentPage={currentPage} setCurrentPage={setCurrentPage} />
-                        <Link text='Get My Menu' currentPage={currentPage} setCurrentPage={setCurrentPage} />
+                        <Link text='Home' currentPage={currentPage} setCurrentPage={setCurrentPageAndClose} />
+                        <Link text='Why Should I Eat Clean' currentPage={currentPage} setCurrentPage={setCurrentPageAndClose} />
+                        <Link text='Get My Menu' currentPage={currentPage} setCurrentPage={setCurrentPageAndClose} />
                     </div>
                 </div>
             )}
